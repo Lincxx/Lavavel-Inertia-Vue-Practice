@@ -16,8 +16,8 @@
         <meta type="description" content="My home description" head-key="description">
     </Head> -->
 
-    <Head title="| Home" />
+    <Head :title="` | ${$page.component}`" />
         
     
-    <h1 class="text-3xl font-bold ">Hello</h1>
+    <h1 class="text-3xl font-bold ">{{$page.props.user}}</h1>
 </template>
