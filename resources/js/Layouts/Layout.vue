@@ -10,8 +10,8 @@ import { route } from '../../../vendor/tightenco/ziggy/src/js';
             <nav class="flex items-center justify-between p-4">
                 <h1>{{ $page.props.auth.user }}</h1>
                 <div class="space-x-6">
-                    <Link  :href="route('home')">Home</Link>
-                    <Link  :href="route('about')">About</Link>
+                    <Link :href="route('home')">Home</Link>
+                    <Link :href="route('about')">About</Link>
                 </div>
             </nav>
         </header>
