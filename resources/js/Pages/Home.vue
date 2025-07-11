@@ -17,7 +17,6 @@
     </Head> -->
 
     <Head :title="` | ${$page.component}`" />
-        
     
-    <h1 class="text-3xl font-bold ">{{$page.props.user}}</h1>
+    <Link class="mt-[1400px] block" href="/" preserve-scroll>Refresh</Link>
 </template>
