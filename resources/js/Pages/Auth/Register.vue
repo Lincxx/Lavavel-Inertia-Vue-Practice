@@ -5,10 +5,15 @@ import TextInput from '../Components/TextInput.vue';
 
 const form = useForm({
     name: null,
-    email: null,  
+    email: null,
     password: null,
-    password_confirmation: null
-})
+    password_confirmation: null,
+    avatar: null
+});
+
+const change = (e) => {
+    form.avatar = e.target.files[0]
+}
 
 const submit = () => {
     form.post(route('register'), {
@@ -23,6 +28,12 @@ const submit = () => {
 
     <div class="w-2/4 mx-auto">
         <form @submit.prevent="submit">
+            <div>
+                <label for="avatar">Avatar</label>
+                <input type="file" id="avatar" @input="change"/>
+                <p :message="form.errors.avatar"></p>
+            </div>
+
             <TextInput name="name" v-model="form.name" :message="form.errors.name" />
             
             <TextInput name="email" type="email" v-model="form.email" :message="form.errors.email" />
