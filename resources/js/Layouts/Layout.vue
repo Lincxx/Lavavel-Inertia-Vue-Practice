@@ -15,7 +15,8 @@ import { route } from '../../../vendor/tightenco/ziggy/src/js';
                         :class="{'bg-slate-700': $page.component === 'Home'}">Home
                     </Link>
                 </div>
-                <div v-if="$page.props.auth.user" class="space-x-6">
+                <div v-if="$page.props.auth.user" class="space-x-6 flex">
+                    <img class="avatar" :src="'storage/' + $page.props.auth.user.avatar" alt="">
                     <Link 
                         :href="route('dashboard')" 
                         class="nav-link"
